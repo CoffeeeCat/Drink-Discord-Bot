@@ -30,7 +30,7 @@ async def change_status():
         await channel.send("Danke c:, ich schreib in Zwei Stunden nochmal :3")
 
 @bot.command()
-async def cat():
+async def cat(ctx):
     await channel.send(file=discord.File(randome.choice('cat_01.jpg', 'cat_02.jpg', 'cat_03.jpg')))
 
 # Temp - URL Store
