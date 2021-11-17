@@ -6,6 +6,7 @@ from config import *
 me = 350340795519467520
 bot = commands.Bot(command_prefix='.')
 client = commands.Bot(command_prefix=".")
+channel = bot.get_channel(908817594511929366)
 
 #Pre Event / Console Event
 @bot.event
