@@ -1,4 +1,4 @@
-import discord,asyncio,os,json
+import discord,asyncio,os,json,random
 from discord.ext import commands, tasks
 from config import *
 
