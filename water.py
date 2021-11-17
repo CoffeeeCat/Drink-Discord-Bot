@@ -29,9 +29,9 @@ async def change_status():
     if msg:
         await channel.send("Danke c:, ich schreib in Zwei Stunden nochmal :3")
 
-@client.command()
-async def cat(ctx):
-    await channel.send(file=discord.File(randome.choice(('cat_01.jpg', 'cat_02.jpg', 'cat_03.jpg'))))
+@bot.command()
+async def cat():
+    await channel.send(file=discord.File(randome.choice('cat_01.jpg', 'cat_02.jpg', 'cat_03.jpg')))
 
 # Temp - URL Store
 #https://api.steampowered.com/ISteamUserStats/GetUserStatsForGame/v0002/?appid=381210&key=8E18F88DEE099EC89AEB6756C59B8B18&steamid=76561198088660842&format=json
