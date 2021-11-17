@@ -1,4 +1,4 @@
-import discord,asyncio,os,json,
+import discord,asyncio,os,json
 from discord.ext import commands, tasks,
 from config.py import *
 
