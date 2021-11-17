@@ -32,7 +32,7 @@ async def change_status():
 
 @bot.command(pass_context=True)
 async def cat(ctx):
-    await ctx.send(file=discord.File(randome.choice('cat_01.jpg', 'cat_02.jpg', 'cat_03.jpg')))
+    await ctx.send(file=discord.File(random.choice('cat_01.jpg', 'cat_02.jpg', 'cat_03.jpg')))
 
 # Temp - URL Store
 #https://api.steampowered.com/ISteamUserStats/GetUserStatsForGame/v0002/?appid=381210&key=8E18F88DEE099EC89AEB6756C59B8B18&steamid=76561198088660842&format=json
