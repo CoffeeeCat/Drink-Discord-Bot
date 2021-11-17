@@ -44,11 +44,6 @@ async def cat(ctx):
 #https://api.steampowered.com/ISteamUserStats/GetUserStatsForGame/v0002/?appid=381210&key=8E18F88DEE099EC89AEB6756C59B8B18&steamid=76561198088660842&format=json
 
 
-@bot.command()
-async def jsonTest(ctx, type: str = None):
-    data = json.loads(response.json())[3]
-
-
 bot.run(token)
 
 
