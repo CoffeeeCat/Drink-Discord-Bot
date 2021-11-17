@@ -1,6 +1,6 @@
 import discord,asyncio,os,json
 from discord.ext import commands, tasks
-from config.py import *
+from config import *
 
 
 me = 350340795519467520
