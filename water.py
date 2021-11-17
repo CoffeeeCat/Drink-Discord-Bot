@@ -31,9 +31,9 @@ async def change_status():
         await channel.send("Danke c:, ich schreib in Zwei Stunden nochmal :3")
 
 cat_img = [
-    discord.File('cat_01.jpg'),
-    discord.File('cat_02.jpg'),
-    discord.File('cat_03.jpg'),
+    await ctx.send(file=choice('cat_01.jpg')),
+    await ctx.send(file=choice('cat_02.jpg')),
+    await ctx.send(file=choice('cat_03.jpg')),
 ]
 
 @bot.command(pass_context=True)
