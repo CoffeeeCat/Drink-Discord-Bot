@@ -7,11 +7,6 @@ me = 350340795519467520
 bot = commands.Bot(command_prefix='.')
 client = commands.Bot(command_prefix=".")
 channel = bot.get_channel(908817594511929366)
-cat_img = [
-    await ctx.send(file=choice('cat_01.jpg')),
-    await ctx.send(file=choice('cat_02.jpg')),
-    await ctx.send(file=choice('cat_03.jpg')),
-]
 
 #Pre Event / Console Event
 @bot.event
@@ -34,11 +29,11 @@ async def change_status():
     msg = await bot.wait_for('message', check=check, timeout=180)
     if msg:
         await channel.send("Danke c:, ich schreib in Zwei Stunden nochmal :3")
-        
 
-@client.command(pass_context=True)
-async def cat(ctx):
-    await ctx.send(file=discord.File(random.choice(cat_img)
+
+@bot.command(pass_context=True)
+async def cat():
+    await channel.send(file=discord.File('cat_01.jpg'))
 
 
 bot.run(token)
