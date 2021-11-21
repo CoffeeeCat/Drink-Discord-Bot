@@ -7,6 +7,11 @@ me = 350340795519467520
 bot = commands.Bot(command_prefix='.')
 client = commands.Bot(command_prefix=".")
 channel = bot.get_channel(908817594511929366)
+cat_img = [
+    await ctx.send(file=choice('cat_01.jpg')),
+    await ctx.send(file=choice('cat_02.jpg')),
+    await ctx.send(file=choice('cat_03.jpg')),
+]
 
 #Pre Event / Console Event
 @bot.event
@@ -29,19 +34,11 @@ async def change_status():
     msg = await bot.wait_for('message', check=check, timeout=180)
     if msg:
         await channel.send("Danke c:, ich schreib in Zwei Stunden nochmal :3")
+        
 
-cat_img = [
-    await ctx.send(file=choice('cat_01.jpg')),
-    await ctx.send(file=choice('cat_02.jpg')),
-    await ctx.send(file=choice('cat_03.jpg')),
-]
-
-@bot.command(pass_context=True)
+@client.command(pass_context=True)
 async def cat(ctx):
     await ctx.send(file=discord.File(random.choice(cat_img)
-
-# Temp - URL Store
-#https://api.steampowered.com/ISteamUserStats/GetUserStatsForGame/v0002/?appid=381210&key=8E18F88DEE099EC89AEB6756C59B8B18&steamid=76561198088660842&format=json
 
 
 bot.run(token)
