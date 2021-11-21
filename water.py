@@ -32,7 +32,7 @@ async def change_status():
 
 
 @bot.command(pass_context=True)
-async def cat():
+async def cat(ctx):
     await channel.send(file=discord.File('cat_01.jpg'))
 
 
